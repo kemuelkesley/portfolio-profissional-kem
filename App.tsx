@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Code2, 
-  Terminal, 
-  Cpu, 
   Globe, 
   Database, 
   Github, 
@@ -11,17 +9,26 @@ import {
   ChevronDown,
   ExternalLink,
   Sparkles,
-  Download,
-  User,
+  Download, 
   ChevronLeft,
   ChevronRight,
   X,
   Briefcase,
   Calendar,
-  GraduationCap,
-  MapPin,
-  CheckCircle2
+  GraduationCap, 
+  CheckCircle2,
+  Brackets, 
+  Code, 
+  Coffee, 
+  Leaf, 
+  Box, 
+  Server, 
+  GitBranch,   
 } from 'lucide-react';
+
+import { Icon } from "@iconify/react";
+
+
 import ContactForm from './components/ContactForm';
 import Background from './components/Background';
 import { Project, Experience } from './types';
@@ -383,36 +390,54 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="py-20 relative">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            <div className="w-full md:w-1/3">
-              <h2 className="text-4xl font-display font-bold mb-6">Tech Stack <br /><span className="text-vivid-cyan">Moderno</span></h2>
-              <p className="text-gray-400 leading-relaxed">
-                Utilizo as ferramentas mais atuais do mercado para garantir que cada aplicação seja rápida, segura e fácil de manter. Meu foco em Django ecossistema e Python, java com Spring Boot.
-              </p>
-            </div>
-            
-            <div className="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-4">
-              {[
-                { name: 'React / Next.js', icon: <Code2 className="text-vivid-cyan" /> },
-                { name: 'TypeScript', icon: <Terminal className="text-vivid-blue" /> },
-                { name: 'Node.js', icon: <Cpu className="text-green-400" /> },
-                { name: 'Tailwind CSS', icon: <Sparkles className="text-vivid-pink" /> },
-                { name: 'PostgreSQL', icon: <Database className="text-blue-400" /> },
-                { name: 'Cloud / AWS', icon: <Globe className="text-orange-400" /> },
-              ].map((skill, idx) => (
-                <div key={idx} className="p-6 bg-white/5 border border-white/10 rounded-xl hover:border-vivid-purple/50 hover:bg-white/10 transition-all group cursor-default">
-                  <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">{skill.icon}</div>
-                  <h3 className="font-bold text-lg">{skill.name}</h3>
-                </div>
-              ))}
+      {/* Skills Section */}       
+        <section id="skills" className="py-20 relative">
+          <div className="container mx-auto px-6">
+            <div className="flex flex-col md:flex-row gap-12 items-center">
+              
+              <div className="w-full md:w-1/3">
+                <h2 className="text-4xl font-display font-bold mb-6">
+                  Tech Stack <br />
+                  <span className="text-vivid-cyan">Moderno</span>
+                </h2>
+                <p className="text-gray-400 leading-relaxed">
+                  Utilizo as ferramentas mais atuais do mercado para garantir que cada
+                  aplicação seja rápida, segura e fácil de manter. Meu foco em Django ecossistema 
+                  e Python, Java com Spring Boot.
+                </p>
+              </div>
+
+              <div className="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-4">
+                {[
+                  { name: "Django", icon: "vscode-icons:file-type-django" },
+                  { name: "Python", icon: "logos:python" },
+                  { name: "Java", icon: "logos:java" },
+                  { name: "Spring Boot", icon: "logos:spring-icon" },
+                  { name: "Postgres", icon: "logos:postgresql" },
+                  { name: "Bootstrap", icon: "logos:bootstrap" },
+                  { name: "SQL Server", icon: "vscode-icons:file-type-sql" },
+                  { name: "HTML", icon: "vscode-icons:file-type-html" },
+                  { name: "CSS", icon: "vscode-icons:file-type-css" },
+                  { name: "JavaScript", icon: "logos:javascript" },
+                  { name: "FastAPI", icon: "logos:fastapi" },                  
+                  { name: "Git", icon: "logos:git-icon" },
+                ].map((skill, idx) => (
+                  <div
+                    key={idx}
+                    className="p-6 bg-white/5 border border-white/10 rounded-xl 
+                    hover:border-vivid-purple/50 hover:bg-white/10 transition-all group cursor-default"
+                  >
+                    <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                      <Icon icon={skill.icon} width="48" />
+                    </div>
+                    <h3 className="font-bold text-lg">{skill.name}</h3>
+                  </div>
+                ))}
+              </div>
+
             </div>
           </div>
-        </div>
-      </section>
-
+        </section>
       {/* Experience Section */}
       <section id="experience" className="py-24 relative">
         <div className="container mx-auto px-6">
