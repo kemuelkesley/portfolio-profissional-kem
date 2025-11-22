@@ -193,34 +193,46 @@ const App: React.FC = () => {
   const experiences: Experience[] = [
     {
       id: 1,
-      role: "Desenvolvedor Front-end Freelancer",
-      company: "Autônomo",
-      period: "2024 - Presente",
-      description: "Desenvolvimento de landing pages e aplicações web responsivas utilizando React e Tailwind CSS. Foco em performance, SEO e experiência do usuário.",
-      longDescription: "Como freelancer, atuo em todo o ciclo de vida do desenvolvimento frontend. Realizo reuniões de briefing com clientes para entender necessidades de negócio, prototipo interfaces no Figma e implemento soluções robustas usando React.js. Recentemente, entreguei 3 projetos completos que aumentaram a conversão dos clientes em média 40% através de melhorias de UX e performance (Core Web Vitals).",
-      skills: ["React", "Tailwind CSS", "Figma", "SEO", "Performance"],
+      role: "Desenvolvedor FullStack",
+      company: "Tribunal Eleitoral de Alagoas TRE-AL",
+      period: "2023 - Presencial",
+      description: "Desenvolvi melhorias e participei da criação de novos sistemas, com foco em estruturação de dados, fluxos de trabalho e layouts.",
+      longDescription: "Fui responsável pela arquitetura, documentação e modelagem de sistemas no Projeto de Gerenciamento de Urnas Eletrônicas. Estruturei o fluxo de dados e a organização do sistema no Projeto de Reembolso de Despesas de Viagem de Servidores Públicos. Além disso, contribuí para a criação de layouts e estilo para a nova intranet, aplicando as melhores práticas de design no Projeto de Intranet.",
+      skills: ["Java", "Oracle", "Python", "HTML", "CSS", "Javascript" ],
       type: "Work"
     },
     {
       id: 2,
-      role: "Estudante de Engenharia de Software",
-      company: "Universidade Tecnológica",
-      period: "2023 - 2027 (Previsão)",
-      description: "Cursando bacharelado com foco em estruturas de dados, algoritmos, arquitetura de software e metodologias ágeis de desenvolvimento.",
-      longDescription: "Bacharelado em andamento com ênfase prática. Tenho me destacado nas disciplinas de Algoritmos Avançados e Programação Orientada a Objetos. Participo ativamente de hackathons universitários e grupos de estudo sobre Inteligência Artificial. Meu TCC está sendo planejado na área de Machine Learning aplicado à acessibilidade na web.",
-      skills: ["Algoritmos", "Estrutura de Dados", "Java", "C++", "Scrum"],
+      role: "Desenvolvedor FullStack",
+      company: "Casa da Industria - SENAI/SESI – Parceria com o Governo",
+      period: "2021 a 2022  - Presencial",
+      description: "Atuei na criação de interfaces e desenvolvimento de sistemas, contribuindo para soluções web completas em projetos internos e governamentais.",
+      longDescription: "Fui responsável pela criação da interface visual completa do sistema de matrícula de alunos no Projeto Qualificação SENAI, utilizando HTML, CSS, Bootstrap, JavaScript, jQuery, PHP e SQL. No Projeto IoT – Agendamento de Reuniões, desenvolvi a tela de login e o banco de dados para controle de reservas de salas. No Projeto Catraca SENAI, criei um procedimento automatizado que insere diariamente os alunos matriculados em um novo banco de dados, garantindo a atualização contínua e precisa dos registros.",
+      skills:["HTML", "CSS", "JavaScript", "Sql-Server", "Jquery", "Bootstrap", "Python", "RM-Totvs"],
+      type: "Work"
+    },
+
+    {
+      id: 3,
+      role: "Desenvolvedor Python",
+      company: "MyIA",
+      period: "2021 - 2021 - Remoto",
+      description: "Atuei no aprimoramento de métodos de ensino e no desenvolvimento de funcionalidades relacionadas ao uso e evolução da plataforma Moodle, além de colaborar em projetos envolvendo Python e Django.",
+      longDescription: "Desenvolvi melhores métodos de ensino para abordar questões relacionadas aos critérios de desenvolvimento da plataforma, incluindo a adição de provas, o upload de videoaulas, materiais didáticos, links e o treinamento de professores para utilizarem com eficiência as ferramentas do Moodle. Além disso, participei de um projeto de desenvolvimento utilizando Python, Django e bibliotecas de ciência de dados como Pandas, NumPy e Matplotlib, sendo responsável pela criação da estrutura inicial do projeto e pela definição dos primeiros componentes lógicos e arquiteturais.",
+      skills: ["Python", "Django", "Ciencias de dados", "Analise de dados", "Scrum"],
       type: "Education"
     },
     {
-      id: 3,
-      role: "Estágio em Desenvolvimento Web",
-      company: "Tech Start Solutions",
-      period: "2023 - 2024",
-      description: "Auxiliei na manutenção de sistemas legados e implementação de novas features em dashboards administrativos utilizando JavaScript e PHP.",
-      longDescription: "Durante meu estágio, fui responsável pela refatoração de módulos legados, o que resultou em uma redução de 30% no tempo de carregamento de relatórios. Colaborei diariamente com a equipe de QA para identificar e corrigir bugs antes do deploy. Aprendi muito sobre versionamento de código com Git em equipes grandes e integração contínua (CI/CD).",
-      skills: ["JavaScript", "PHP", "MySQL", "Git", "Jira"],
-      type: "Work"
-    }
+      id: 4,
+      role: "Estudante de Engenharia de Software/ Sistema de Informação",
+      company: "Universidade Estacio de Sá",
+      period: "2020 - 2026 (Previsão)",
+      description: "Cursando bacharelado com foco em estruturas de dados, algoritmos, arquitetura de software e metodologias ágeis de desenvolvimento.",
+      longDescription: "Bacharelado em andamento com ênfase prática. Tenho me destacado nas disciplinas de Algoritmos Avançados e Programação Orientada a Objetos. Participo ativamente de hackathons universitários e grupos de estudo sobre Inteligência Artificial. Meu TCC está sendo planejado na área de Machine Learning aplicado à acessibilidade na web.",
+      skills: ["Algoritmos", "Estrutura de Dados", "Java", "Python", "Scrum"],
+      type: "Education"
+    },
+
   ];
 
   return (
