@@ -150,43 +150,73 @@ const App: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Dashboard Analítico AI",
-      description: "Plataforma de análise de dados em tempo real.",
-      longDescription: "Um painel administrativo completo que utiliza inteligência artificial para processar grandes volumes de dados e gerar insights em tempo real para tomadas de decisão estratégica. Inclui gráficos interativos e exportação de relatórios automatizada.",
-      tech: ["React", "Python", "TensorFlow", "Tailwind"],
-      image: "https://picsum.photos/800/600?random=1",
-      githubUrl: "#",
-      liveUrl: "#"
+      title: "HelpDesk",
+      description: "Plataforma de abertura e fechamento de chamados.",
+      longDescription: "Helpdesk é um aplicativo de gerenciamento de tickets projetado para otimizar as operações de suporte técnico, permitindo Usuários poderão abrir e fechar chamados, rastrear instalações de equipamentos em condomínios e registrar quem realizou essas operações O aplicativo também captura dados essenciais para alimentar um sistema de Big Data, auxiliando na análise e melhoria dos serviços.",
+      tech: ["Python", "HTML", "CSS", "Bootstrap", "SQL Server"],
+      image: "public/assets/images-project/helpdesk.png",
+      githubUrl: "https://github.com/kemuelkesley/helpdesk-faculdade?tab=readme-ov-file",
+      liveUrl: "https://helpdesk-libk.onrender.com/login/"
     },
     {
       id: 2,
-      title: "E-commerce NextGen",
-      description: "Loja virtual headless com experiência 3D.",
-      longDescription: "Uma plataforma de comércio eletrônico de última geração utilizando arquitetura headless. O destaque é a visualização de produtos em 3D utilizando Three.js, permitindo que o usuário interaja com o objeto antes da compra. Check-out otimizado e ultra-rápido.",
-      tech: ["Next.js", "Three.js", "Stripe", "PostgreSQL"],
-      image: "https://picsum.photos/800/600?random=2",
-      githubUrl: "#",
+      title: "College extension",
+      description: "Projeto criado para extensão universitária.",
+      longDescription: "O Projeto Extensionista é uma solução de intranet desenvolvida para empresas que desejam manter seus funcionários informados sobre as últimas novidades Regulamentos, cursos e eventos internos. O sistema permite que os administradores publiquem notícias e anúncios em uma área administrativa dedicada Acessível apenas por usuários autorizados. Isso garante que os funcionários possam acessar facilmente essas atualizações e se manter informados sobre o que está acontecendo dentro da empresa. O projeto também inclui um sistema de autenticação, garantindo acesso seguro e controlado.",
+      tech: ["Python", "HTML", "CSS", "Javascript", "Bootstrap", "SQL-Server", "GIT", "AWS"],
+      image: "public/assets/images-project/empresa.jpg",
+      githubUrl: "https://github.com/kemuelkesley/projeto-extensionista-faculdade?tab=readme-ov-file",
       liveUrl: "#"
     },
     {
       id: 3,
-      title: "Social Connect App",
-      description: "App mobile para conectar desenvolvedores.",
-      longDescription: "Aplicativo móvel desenvolvido para fomentar a comunidade local de tecnologia. Permite criar eventos, grupos de estudo e mentoria. Possui chat em tempo real e sistema de geolocalização para encontrar devs próximos.",
-      tech: ["React Native", "Firebase", "Redux", "TypeScript"],
-      image: "https://picsum.photos/800/600?random=3",
-      githubUrl: "#",
+      title: "Todo-list",
+      description: "App criado para gerenciamento de tarefas.",
+      longDescription: "O objetivo deste projeto foi criar uma aplicação CRUD para colocar em prática alguns aprendizados importantes Este projeto foi desenvolvido para praticar conceitos de desenvolvimento web através da criação de um aplicativo simples de avaliação de alunos O principal objetivo do aplicativo é calcular a média das notas de um aluno e determinar se ele foi aprovado ou reprovado Foi construído utilizando HTML , CSS , JavaScript , jQuery e MDBootstrap para fornecer uma interface responsiva e amigável",
+      tech: ["Python", "Django", "HTML", "CSS", "MDBootstrap", "SQLite", "Jquery"],
+      image: "public/assets/images-project/todolist.webp",
+      githubUrl: "https://github.com/kemuelkesley/todo-list_django",
       liveUrl: "#"
     },
     {
       id: 4,
-      title: "Finance Flow",
-      description: "Gestão financeira pessoal automatizada.",
-      longDescription: "Sistema de controle financeiro que se conecta via Open Finance aos bancos do usuário para categorizar gastos automaticamente. Interface limpa, modo escuro e metas de economia gamificadas.",
-      tech: ["Vue.js", "Node.js", "MongoDB", "ChartJS"],
-      image: "https://picsum.photos/800/600?random=4",
-      githubUrl: "#",
-      liveUrl: "#"
+      title: "APP-Notas",
+      description: "Desenvolvidos para aplicar técnicas de manipulação do Doom.",
+      longDescription: "Este projeto foi desenvolvido para aplicar técnicas de manipulação do DOM com JavaScript e jQuery, criando um aplicativo simples que calcula duas notas, exibe a média e indica se o aluno foi aprovado ou reprovado O aplicativo foi desenvolvido usando HTML , CSS , JavaScript e jQuery , com foco em design responsivo, interatividade e funcionalidade amigável ao usuário.",
+      tech: ["HTML", "CSS", "JavaScript", "Jquery"],
+      image: "public/assets/images-project/app-notas.png",
+      githubUrl: "https://github.com/kemuelkesley/app-notas",
+      liveUrl: "https://kemuelkesley.github.io/app-notas/"
+    },
+    {
+      id: 5,
+      title: "Calk-brinks",
+      description: "Criado para um processo seletivo para desenvolvedor front-end.",
+      longDescription: "Este projeto foi um desafio desenvolvido para uma candidatura a um emprego na área de desenvolvimento web, onde eu precisava criar um algoritmo que determinasse o tipo de lente mais adequado para um cliente, com base em se a sua prescrição era do tipo X ou Y",
+      tech: ["HTML", "CSS", "JavaScript"],
+      image: "public/assets/images-project/calc-brinks.png",
+      githubUrl: "https://github.com/kemuelkesley/app-notas",
+      liveUrl: "https://kemuelkesley.github.io/calc-brinks/"
+    },
+    {
+      id: 6,
+      title: "Cadastro de Alunos",
+      description: "Criação de casdastro de alunos com validação de formulários.",
+      longDescription: "",
+      tech: ["HTML", "CSS", "Javascript", "SQL-server", "Jquery", "PHP"],
+      image: "public/assets/images-project/cad-alunos.png",
+      githubUrl: "https://github.com/kemuelkesley/cadalunos--Finalizado",
+      liveUrl: "https://kemuelkesley.github.io/cadalunos--Finalizado/"
+    },
+    {
+      id: 7,
+      title: "Criação de blog-teste",
+      description: "Criação de blog simples para praticar conceitos",
+      longDescription: "O principal objetivo deste projeto foi criar um portfólio pessoal para colocar em prática algumas das novas habilidades que aprendi Foi construído utilizando HTML , CSS e JavaScript , aplicando design responsivo e interatividade para proporcionar uma experiência funcional e amigável ao usuário.",
+      tech: ["HTML","CSS"],
+      image: "public/assets/images-project/about-me.png",
+      githubUrl: "https://github.com/kemuelkesley/about-me",
+      liveUrl: "https://about-me-gamma-sable.vercel.app/index.html"
     }
   ];
 
@@ -373,7 +403,7 @@ const App: React.FC = () => {
               
               <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
                 <p>
-                  Olá! Sou <strong>Kemuel Kesley</strong>, um futuro Engenheiro de Software apaixonado por resolver problemas complexos através da tecnologia. Minha jornada começou com a curiosidade de entender como as coisas funcionam "por trás das telas" e evoluiu para uma carreira focada em desenvolvimento full-stack.
+                  Olá! Sou <strong>Kemuel Kesley</strong>, futuro Engenheiro de Software apaixonado por resolver problemas complexos através da tecnologia. Minha jornada começou com a curiosidade de entender como as coisas funcionam "por trás das telas" e evoluiu para uma carreira focada em desenvolvimento full-stack.
                 </p>
                 <p>
                   Acredito que o código é uma ferramenta para melhorar vidas e impulsionar negócios. Combino rigor técnico com uma sensibilidade apurada para design e experiência do usuário (UX), garantindo que minhas entregas sejam não apenas funcionais, mas também intuitivas e memoráveis.
@@ -656,7 +686,7 @@ const App: React.FC = () => {
               Pronto para <span className="text-transparent bg-clip-text bg-gradient-to-r from-vivid-cyan to-vivid-purple">inovar?</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-xl mx-auto">
-              Estou disponível para projetos freelance e oportunidades full-time. Entre em contato através do formulário profissional abaixo.
+              Estou disponível para projetos freelance e oportunidades full-time. Entre em contato através do formulário abaixo.
             </p>
           </div>
           
