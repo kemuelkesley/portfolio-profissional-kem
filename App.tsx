@@ -154,7 +154,7 @@ const App: React.FC = () => {
       description: "Plataforma de abertura e fechamento de chamados.",
       longDescription: "Helpdesk é um aplicativo de gerenciamento de tickets projetado para otimizar as operações de suporte técnico, permitindo Usuários poderão abrir e fechar chamados, rastrear instalações de equipamentos em condomínios e registrar quem realizou essas operações O aplicativo também captura dados essenciais para alimentar um sistema de Big Data, auxiliando na análise e melhoria dos serviços.",
       tech: ["Python", "HTML", "CSS", "Bootstrap", "SQL Server"],
-      image: "public/assets/images-project/helpdesk.png",
+      image: "assets/images-project/helpdesk.png",
       githubUrl: "https://github.com/kemuelkesley/helpdesk-faculdade?tab=readme-ov-file",
       liveUrl: "https://helpdesk-libk.onrender.com/login/"
     },
@@ -164,7 +164,7 @@ const App: React.FC = () => {
       description: "Projeto criado para extensão universitária.",
       longDescription: "O Projeto Extensionista é uma solução de intranet desenvolvida para empresas que desejam manter seus funcionários informados sobre as últimas novidades Regulamentos, cursos e eventos internos. O sistema permite que os administradores publiquem notícias e anúncios em uma área administrativa dedicada Acessível apenas por usuários autorizados. Isso garante que os funcionários possam acessar facilmente essas atualizações e se manter informados sobre o que está acontecendo dentro da empresa. O projeto também inclui um sistema de autenticação, garantindo acesso seguro e controlado.",
       tech: ["Python", "HTML", "CSS", "Javascript", "Bootstrap", "SQL-Server", "GIT", "AWS"],
-      image: "public/assets/images-project/empresa.jpg",
+      image: "assets/images-project/empresa.jpg",
       githubUrl: "https://github.com/kemuelkesley/projeto-extensionista-faculdade?tab=readme-ov-file",
       liveUrl: "#"
     },
@@ -174,7 +174,7 @@ const App: React.FC = () => {
       description: "App criado para gerenciamento de tarefas.",
       longDescription: "O objetivo deste projeto foi criar uma aplicação CRUD para colocar em prática alguns aprendizados importantes Este projeto foi desenvolvido para praticar conceitos de desenvolvimento web através da criação de um aplicativo simples de avaliação de alunos O principal objetivo do aplicativo é calcular a média das notas de um aluno e determinar se ele foi aprovado ou reprovado Foi construído utilizando HTML , CSS , JavaScript , jQuery e MDBootstrap para fornecer uma interface responsiva e amigável",
       tech: ["Python", "Django", "HTML", "CSS", "MDBootstrap", "SQLite", "Jquery"],
-      image: "public/assets/images-project/todolist.webp",
+      image: "assets/images-project/todolist.webp",
       githubUrl: "https://github.com/kemuelkesley/todo-list_django",
       liveUrl: "#"
     },
@@ -184,7 +184,7 @@ const App: React.FC = () => {
       description: "Desenvolvidos para aplicar técnicas de manipulação do Doom.",
       longDescription: "Este projeto foi desenvolvido para aplicar técnicas de manipulação do DOM com JavaScript e jQuery, criando um aplicativo simples que calcula duas notas, exibe a média e indica se o aluno foi aprovado ou reprovado O aplicativo foi desenvolvido usando HTML , CSS , JavaScript e jQuery , com foco em design responsivo, interatividade e funcionalidade amigável ao usuário.",
       tech: ["HTML", "CSS", "JavaScript", "Jquery"],
-      image: "public/assets/images-project/app-notas.png",
+      image: "assets/images-project/app-notas.png",
       githubUrl: "https://github.com/kemuelkesley/app-notas",
       liveUrl: "https://kemuelkesley.github.io/app-notas/"
     },
@@ -214,7 +214,7 @@ const App: React.FC = () => {
       description: "Criação de blog simples para praticar conceitos",
       longDescription: "O principal objetivo deste projeto foi criar um portfólio pessoal para colocar em prática algumas das novas habilidades que aprendi Foi construído utilizando HTML , CSS e JavaScript , aplicando design responsivo e interatividade para proporcionar uma experiência funcional e amigável ao usuário.",
       tech: ["HTML","CSS"],
-      image: "public/assets/images-project/about-me.png",
+      image: "assets/images-project/about-me.png",
       githubUrl: "https://github.com/kemuelkesley/about-me",
       liveUrl: "https://about-me-gamma-sable.vercel.app/index.html"
     }
@@ -415,7 +415,7 @@ const App: React.FC = () => {
 
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://drive.google.com/file/d/1UhQJcaw0_Dt--q1nHTAR9ZHPC01Uhfij/view?usp=sharing" // coloque o PDF em public/assets/cv.pdf
+                  href="https://drive.google.com/file/d/1UhQJcaw0_Dt--q1nHTAR9ZHPC01Uhfij/view?usp=sharing" // coloque o PDF em assets/cv.pdf
                   download="Kemuel_Kesley_CV.pdf"
                   className="px-8 py-3 bg-vivid-purple hover:bg-vivid-purple/90 text-white rounded-lg font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-purple-500/20"
                   target="_blank" rel="noopener noreferrer"
