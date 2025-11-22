@@ -137,7 +137,9 @@ const App: React.FC = () => {
       });
     }
   };
+  
 
+  // Projetos Pessoais
   const projects: Project[] = [
     {
       id: 1,
@@ -222,7 +224,7 @@ const App: React.FC = () => {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-vivid-dark/80 backdrop-blur-md border-b border-white/5 py-4' : 'py-6'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-vivid-cyan to-vivid-purple">
-            KEMUEL.<span className="text-white">KESLEY</span>
+            KEMUEL <span className="text-white">KESLEY</span>
           </div>
           <div className="hidden md:flex gap-8 items-center">
             <button 
@@ -282,20 +284,20 @@ const App: React.FC = () => {
               </div>
             </div>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-tight mb-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-tight mb-8 animate-fade-in" style={{ animationDelay: '0.10s' }}>
               Criando o <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-vivid-purple via-vivid-pink to-vivid-orange-400 animate-gradient pr-4 inline-block">
-                Futuro Digital
+                Futuro Digital 
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Especialista em transformar ideias complexas em interfaces elegantes e funcionais. Focado em escalabilidade, performance e experiência do usuário.
+              Em constante evolução na programação, construindo soluções digitais com foco em desempenho, usabilidade e aprendizado contínuo.
             </p>
             
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <a 
-                href="https://wa.me/5511999999999" 
+                href="https://wa.me/5582988516305" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-white text-vivid-dark font-bold rounded-full hover:bg-gray-100 transition-transform hover:scale-105 active:scale-95 flex items-center gap-2"
@@ -335,7 +337,8 @@ const App: React.FC = () => {
               {/* Image Container */}
               <div className="relative rounded-2xl overflow-hidden aspect-[3/4] md:aspect-square lg:aspect-[3/4] border border-white/10 bg-gray-900">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80" 
+                  // src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80"                   
+                  src="/assets/images/kemuel.png"                 
                   alt="Retrato Profissional de Kemuel Kesley" 
                   className="object-cover w-full h-full transform group-hover:scale-105 transition duration-700 filter grayscale hover:grayscale-0" 
                 />
@@ -362,12 +365,17 @@ const App: React.FC = () => {
               </div>
 
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                 <button className="px-8 py-3 bg-vivid-purple hover:bg-vivid-purple/90 text-white rounded-lg font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-purple-500/20">
+                <a
+                  href="https://drive.google.com/file/d/1UhQJcaw0_Dt--q1nHTAR9ZHPC01Uhfij/view?usp=sharing" // coloque o PDF em public/assets/cv.pdf
+                  download="Kemuel_Kesley_CV.pdf"
+                  className="px-8 py-3 bg-vivid-purple hover:bg-vivid-purple/90 text-white rounded-lg font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-purple-500/20"
+                  target="_blank" rel="noopener noreferrer"
+                >
                   <Download size={18} /> Baixar CV
-                </button>
+                </a>
                 <div className="flex gap-4 items-center justify-center sm:justify-start px-4">
-                  <a href="#" className="p-2 bg-white/5 hover:bg-white/10 rounded-full transition-colors text-gray-400 hover:text-white border border-white/5"><Github size={20} /></a>
-                  <a href="#" className="p-2 bg-white/5 hover:bg-white/10 rounded-full transition-colors text-gray-400 hover:text-blue-400 border border-white/5"><Linkedin size={20} /></a>
+                  <a href="https://github.com/kemuelkesley" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 hover:bg-white/10 rounded-full transition-colors text-gray-400 hover:text-white border border-white/5"><Github size={20} /></a>
+                  <a href="https://www.linkedin.com/in/kemuel-kesley-23886435/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 hover:bg-white/10 rounded-full transition-colors text-gray-400 hover:text-blue-400 border border-white/5"><Linkedin size={20} /></a>
                 </div>
               </div>
             </div>
@@ -382,7 +390,7 @@ const App: React.FC = () => {
             <div className="w-full md:w-1/3">
               <h2 className="text-4xl font-display font-bold mb-6">Tech Stack <br /><span className="text-vivid-cyan">Moderno</span></h2>
               <p className="text-gray-400 leading-relaxed">
-                Utilizo as ferramentas mais atuais do mercado para garantir que cada aplicação seja rápida, segura e fácil de manter. Meu foco é em React e ecossistema TypeScript.
+                Utilizo as ferramentas mais atuais do mercado para garantir que cada aplicação seja rápida, segura e fácil de manter. Meu foco em Django ecossistema e Python, java com Spring Boot.
               </p>
             </div>
             
