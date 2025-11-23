@@ -194,7 +194,7 @@ const App: React.FC = () => {
       description: "Criado para um processo seletivo para desenvolvedor front-end.",
       longDescription: "Este projeto foi um desafio desenvolvido para uma candidatura a um emprego na área de desenvolvimento web, onde eu precisava criar um algoritmo que determinasse o tipo de lente mais adequado para um cliente, com base em se a sua prescrição era do tipo X ou Y",
       tech: ["HTML", "CSS", "JavaScript"],
-      image: "public/assets/images-project/calc-brinks.png",
+      image: "assets/images-project/calc-brinks.png",
       githubUrl: "https://github.com/kemuelkesley/app-notas",
       liveUrl: "https://kemuelkesley.github.io/calc-brinks/"
     },
@@ -204,7 +204,7 @@ const App: React.FC = () => {
       description: "Criação de casdastro de alunos com validação de formulários.",
       longDescription: "",
       tech: ["HTML", "CSS", "Javascript", "SQL-server", "Jquery", "PHP"],
-      image: "public/assets/images-project/cad-alunos.png",
+      image: "assets/images-project/cad-alunos.png",
       githubUrl: "https://github.com/kemuelkesley/cadalunos--Finalizado",
       liveUrl: "https://kemuelkesley.github.io/cadalunos--Finalizado/"
     },
