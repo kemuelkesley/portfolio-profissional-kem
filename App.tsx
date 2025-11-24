@@ -110,6 +110,8 @@ const App: React.FC = () => {
   const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null);
   const [titleIndex, setTitleIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const projectsWrapperRef = useRef<HTMLDivElement>(null);
+  const [cardWidth, setCardWidth] = useState<number>(400);
 
   const titles = ["Futuro Engenheiro de Software", "Desenvolvedor FullStack"];
 
@@ -127,6 +129,29 @@ const App: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Calcula a largura dos cards para mostrar exatamente 3 por vez
+  useEffect(() => {
+    const updateCardWidth = () => {
+      if (projectsWrapperRef.current) {
+        const containerWidth = projectsWrapperRef.current.clientWidth;
+        const gap = 16; // gap-4 = 16px (1rem)
+        const totalGaps = gap * 2; // 2 gaps entre 3 cards
+        const calculatedWidth = (containerWidth - totalGaps) / 3;
+        setCardWidth(Math.max(280, calculatedWidth)); // Mínimo de 280px para responsividade
+      }
+    };
+
+    // Aguarda o próximo frame para garantir que o DOM está renderizado
+    const timeoutId = setTimeout(updateCardWidth, 0);
+    updateCardWidth();
+    
+    window.addEventListener('resize', updateCardWidth);
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('resize', updateCardWidth);
+    };
+  }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -136,10 +161,11 @@ const App: React.FC = () => {
 
   const scrollProjects = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const scrollAmount = 400; // Adjust scroll amount
+      const gap = 16;
+      const scrollAmount = (cardWidth + gap) * 3; // Move exatamente 3 cards
       const currentScroll = scrollContainerRef.current.scrollLeft;
       scrollContainerRef.current.scrollTo({
-        left: direction === 'left' ? currentScroll - scrollAmount : currentScroll + scrollAmount,
+        left: direction === 'left' ? Math.max(0, currentScroll - scrollAmount) : currentScroll + scrollAmount,
         behavior: 'smooth'
       });
     }
@@ -272,37 +298,37 @@ const App: React.FC = () => {
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-vivid-dark/80 backdrop-blur-md border-b border-white/5 py-4' : 'py-6'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-vivid-cyan to-vivid-purple">
+          <div className="text-3xl md:text-4xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-vivid-cyan to-vivid-purple">
             KEMUEL <span className="text-white">KESLEY</span>
           </div>
           <div className="hidden md:flex gap-8 items-center">
             <button 
               onClick={() => scrollToSection('about')} 
-              className="text-sm font-medium hover:text-vivid-cyan transition-all duration-300 transform hover:scale-110"
+              className="text-base font-medium hover:text-vivid-cyan transition-all duration-300 transform hover:scale-110"
             >
               Sobre
             </button>
             <button 
               onClick={() => scrollToSection('skills')} 
-              className="text-sm font-medium hover:text-vivid-cyan transition-all duration-300 transform hover:scale-110"
+              className="text-base font-medium hover:text-vivid-cyan transition-all duration-300 transform hover:scale-110"
             >
               Skills
             </button>
             <button 
               onClick={() => scrollToSection('experience')} 
-              className="text-sm font-medium hover:text-vivid-cyan transition-all duration-300 transform hover:scale-110"
+              className="text-base font-medium hover:text-vivid-cyan transition-all duration-300 transform hover:scale-110"
             >
               Experiência
             </button>
             <button 
               onClick={() => scrollToSection('projects')} 
-              className="text-sm font-medium hover:text-vivid-cyan transition-all duration-300 transform hover:scale-110"
+              className="text-base font-medium hover:text-vivid-cyan transition-all duration-300 transform hover:scale-110"
             >
               Projetos
             </button>
             <button 
               onClick={() => scrollToSection('contact')} 
-              className="px-5 py-2 bg-white/10 hover:bg-white/20 rounded-full border border-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/5"
+              className="px-6 py-2.5 text-base bg-white/10 hover:bg-white/20 rounded-full border border-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/5 font-medium"
             >
               Contato
             </button>
@@ -518,17 +544,19 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <div 
-            ref={scrollContainerRef}
-            className="flex gap-8 overflow-x-auto pb-10 snap-x snap-mandatory scrollbar-hide"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            {projects.map((project) => (
-              <div 
-                key={project.id} 
-                onClick={() => setSelectedProject(project)}
-                className="min-w-[300px] md:min-w-[400px] snap-start cursor-pointer group relative rounded-2xl overflow-hidden bg-gray-900 border border-white/10 hover:border-vivid-pink/50 transition-all duration-500 hover:shadow-2xl hover:shadow-vivid-pink/10"
-              >
+          <div className="overflow-hidden" ref={projectsWrapperRef}>
+            <div 
+              ref={scrollContainerRef}
+              className="flex gap-4 overflow-x-auto pb-10 snap-x snap-mandatory scrollbar-hide"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', scrollSnapType: 'x mandatory' }}
+            >
+              {projects.map((project) => (
+                <div 
+                  key={project.id} 
+                  onClick={() => setSelectedProject(project)}
+                  className="flex-shrink-0 snap-start cursor-pointer group relative rounded-2xl overflow-hidden bg-gray-900 border border-white/10 hover:border-vivid-pink/50 transition-all duration-500 hover:shadow-2xl hover:shadow-vivid-pink/10"
+                  style={{ width: `${cardWidth}px` }}
+                >
                 <div className="aspect-video overflow-hidden">
                   <img 
                     src={project.image} 
@@ -556,6 +584,7 @@ const App: React.FC = () => {
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </section>
@@ -604,10 +633,20 @@ const App: React.FC = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href={selectedProject.liveUrl} className="flex-1 py-3 bg-vivid-cyan hover:bg-vivid-cyan/90 text-black font-bold rounded-lg flex items-center justify-center gap-2 transition-colors">
+                <a 
+                  href={selectedProject.liveUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1 py-3 bg-vivid-cyan hover:bg-vivid-cyan/90 text-black font-bold rounded-lg flex items-center justify-center gap-2 transition-colors"
+                >
                   <Globe size={18} /> Ver Online
                 </a>
-                <a href={selectedProject.githubUrl} className="flex-1 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg border border-white/10 flex items-center justify-center gap-2 transition-colors">
+                <a 
+                  href={selectedProject.githubUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg border border-white/10 flex items-center justify-center gap-2 transition-colors"
+                >
                   <Github size={18} /> Código
                 </a>
               </div>
